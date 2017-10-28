@@ -1,0 +1,35 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="banner right-to-left-bg">
+
+    </ion-row>
+    <ion-row class="login-container">
+      <ion-col>
+        <div class="login-window" padding>
+          <div class="input-group">
+            <input type="text" class="form-input" placeholder="Username">
+            <span class="input-with-icon">
+              <ion-icon name="person"></ion-icon>
+            </span>
+          </div>
+          <div class="input-group">
+            <input type="password" class="form-input" placeholder="Password">
+            <span class="input-with-icon">
+              <ion-icon name="lock"></ion-icon>
+            </span>
+          </div>
+          <button ion-button full round color="primary" (click)="gotoHome()" type="button">Login</button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin-top: 55px;">
+      <ion-col>
+        <span class="bottom-text">
+          <small>Don't have account?
+            <button ion-button small clear color="primary">Click Here</button>
+          </small>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

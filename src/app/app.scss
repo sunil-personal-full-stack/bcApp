@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,79 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.right-to-left-bg {
+  background: #2acfff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #30aaff, #2acfff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #30aaff, #2acfff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bottom-to-top-bg {
+  background: #2acfff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #30aaff, #2acfff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #30aaff, #2acfff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.left-to-right-bg {
+  background: #2acfff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #30aaff, #2acfff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #30aaff, #2acfff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.top-to-bottom-bg {
+  background: #2acfff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #30aaff, #2acfff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #30aaff, #2acfff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form-input {
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all ease 250ms;
+  &:active,&:focus{
+    border-color: #488aff;
+  }
+}
+
+.input-group {
+    margin-bottom: 16px;
+    background: #fff;
+    position: relative;
+    .form-input {
+        background: transparent;
+        z-index: 2;
+        position: relative;
+        &:active,&:focus{
+            border-color: #488aff;
+            & ~ .input-with-icon{
+                color: #488aff;
+            }
+        }
+    }
+    .input-with-icon{
+        position: absolute;
+        height: 100%;
+        width: 38px;
+        right: 0;
+        top: 0;
+        line-height: 40px;
+        text-align: center;
+        z-index: 1;
+        color: #ddd;
+        transition: all ease 250ms;
+    }
+}
