@@ -3,10 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { SecureStorage, SecureStorageObject } from '@ionic-native/secure-storage';
-
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { BcListPage } from '../pages/bc/list/list';
 
 @Component({
   templateUrl: 'app.html'
@@ -21,15 +18,14 @@ export class MyApp {
   constructor(
     public platform: Platform,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen,
-    private secureStorage: SecureStorage) {
+    public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'BC List', component: LoginPage },
-      { title: 'Add BC', component: HomePage },
-      { title: 'Active Bids', component: ListPage }
+      { title: 'BC List', component:  BcListPage},
+      { title: 'Add BC', component:  BcListPage},
+      { title: 'Active Bids', component:  BcListPage}
     ];
 
   }
@@ -39,16 +35,6 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
-      this.secureStorage.create('demo')
-        .then((storage: SecureStorageObject) => {
-          storage.get('ud')
-            .then(
-            data => console.log(data),
-            (error) => {
-              console.log(error);
-              this.nav.setRoot(LoginPage);
-            });
-        })
       this.splashScreen.hide();
     });
   }

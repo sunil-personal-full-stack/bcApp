@@ -4,30 +4,29 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SecureStorage } from '@ionic-native/secure-storage';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { LoginPage } from './../pages/login/login';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+//
+import { BcPageModule } from '../pages/bc/bc.module';
+import { BcListPage } from '../pages/bc/list/list';
+//
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     LoginPage,
-    ListPage
+    BcListPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    BcPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     LoginPage,
-    ListPage
+    BcListPage
   ],
   providers: [
     StatusBar,
