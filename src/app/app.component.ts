@@ -36,6 +36,10 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      console.clear();
+      console.log('%c ---------------------------------', 'color: #f1c40f;');
+      console.log('%c App is Ready!', 'background: #34495e; color: #f1c40f;margin-left:55px; padding:2px 10px;');
+      console.log('%c ---------------------------------', 'color: #f1c40f;');
     });
   }
 
