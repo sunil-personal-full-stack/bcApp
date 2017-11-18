@@ -10,23 +10,31 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //
 import { BcPageModule } from '../pages/bc/bc.module';
 import { BcListPage } from '../pages/bc/list/list';
+import { RegisterComponent } from '../pages/register/register';
+import { BidPage } from '../pages/bid/bid';
+import { BidPageModule } from '../pages/bid/bid.module';
+import { SummaryPageModule } from '../pages/summary/summary.module';
 //
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
-    BcListPage
+    BcListPage,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    BcPageModule
+    BcPageModule,
+    BidPageModule,
+    SummaryPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     LoginPage,
-    BcListPage
+    BcListPage,
+    RegisterComponent
   ],
   providers: [
     StatusBar,

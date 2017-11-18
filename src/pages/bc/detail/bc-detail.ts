@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
-@IonicPage()
 @Component({
-  selector: 'page-bc',
-  templateUrl: 'bc.html',
+  selector: 'page-bc-detail',
+  templateUrl: 'bc-detail.html',
 })
-export class BcPage {
+export class BcDetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -14,5 +13,4 @@ export class BcPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad BcPage');
   }
-
 }

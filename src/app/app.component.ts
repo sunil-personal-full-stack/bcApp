@@ -4,6 +4,8 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BcListPage } from '../pages/bc/list/list';
+import { BidPage } from '../pages/bid/bid';
+import { SummaryPage } from '../pages/summary/summary';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,8 +26,9 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'BC List', component:  BcListPage},
-      { title: 'Add BC', component:  BcListPage},
-      { title: 'Active Bids', component:  BcListPage}
+      { title: 'Active Bids', component:  BidPage},
+      { title: 'Current Month', component:  BcListPage},
+      { title: 'Summary', component:  SummaryPage}
     ];
 
   }
