@@ -7,16 +7,47 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="with-bg">
   <ion-fab top right edge>
-    <button ion-fab color="primary">
-      <ion-icon name="add" ></ion-icon>
+    <button ion-fab color="primary" (click)="addBCPage()" type="buton">
+      <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <button type="button" ion-button full round color="primary" (click)="gotoBCDetail()">Go to BC Detail</button>
+  <ion-card (click)="gotoBCDetail()">
+    <ion-card-content class="small-padding">
+      <ion-item class="no-border-item">
+        <ion-icon name="trending-up" color="secondary" item-start></ion-icon>
+        Bc Title 1 / 10-15
+        <ion-badge item-end><img src="assets/imgs/rupee.svg" class="rupee-sign" />90000</ion-badge>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card (click)="gotoBCDetail()">
+    <ion-card-content class="small-padding">
+      <ion-item class="no-border-item">
+        <ion-icon name="trending-down" color="danger" item-start></ion-icon>
+        Bc Title 2 / 10-15
+        <ion-badge item-end><img src="assets/imgs/rupee.svg" class="rupee-sign" />80000</ion-badge>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card (click)="gotoBCDetail()">
+    <ion-card-content class="small-padding">
+      <ion-item class="no-border-item">
+        <ion-icon name="trending-up" color="secondary" item-start></ion-icon>
+        Bc Title 3 / 20-22
+        <ion-badge item-end><img src="assets/imgs/rupee.svg" class="rupee-sign" />120000</ion-badge>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card (click)="gotoBCDetail()">
+    <ion-card-content class="small-padding">
+      <ion-item class="no-border-item">
+        <ion-icon name="trending-up" color="secondary" item-start></ion-icon>
+        Bc Title 4 / 12-15
+        <ion-badge item-end><img src="assets/imgs/rupee.svg" class="rupee-sign" />150000</ion-badge>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

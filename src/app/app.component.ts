@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { BcListPage } from '../pages/bc/list/list';
 import { BidPage } from '../pages/bid/bid';
 import { SummaryPage } from '../pages/summary/summary';
+import { ProfilePage } from '../pages/profile/profile';
 
 @Component({
   templateUrl: 'app.html'
@@ -50,5 +51,8 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+  loadProfile(){
+    this.nav.push(ProfilePage);
   }
 }

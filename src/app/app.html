@@ -1,7 +1,13 @@
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu</ion-title>
+      <ion-item class="no-border-item no-bg-item profile-info">
+        <ion-avatar item-start>
+          <img src="assets/imgs/user.svg">
+        </ion-avatar>
+        <h2>Sunil Prajapati</h2>
+        <button type="button" (click)="loadProfile()" menuClose clear ion-button small color="primary">Edit Profile</button>
+      </ion-item>
     </ion-toolbar>
   </ion-header>
 

@@ -1,0 +1,78 @@
+<ion-header color="sprimaruy">
+  <ion-navbar color="sprimaruy">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>BC Name</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <div class="input-group with-label" inputpadding>
+        <div class="form-input">Admin Name</div>
+        <label for="">Admin :</label>
+      </div>
+      <div class="input-group with-label" inputpadding>
+        <div class="form-input">8145215246</div>
+        <label for="">Contact :</label>
+      </div>
+      <div class="input-group with-label" inputpadding>
+        <div class="form-input">
+          <ion-item class="no-margin-lbl no-border-item no-bg-item half">
+            07
+          </ion-item>
+          <ion-item class="no-margin-lbl no-border-item no-bg-item half">
+            2017
+          </ion-item>
+        </div>
+        <label for="">Start Month :</label>
+      </div>
+      <div class="input-group with-label" inputpadding>
+        <div class="form-input">001241</div>
+        <label for="">Member No :</label>
+      </div>
+      <div class="input-group with-label" inputpadding>
+        <div class="form-input">2017</div>
+        <label for="">Admin Month :</label>
+      </div>
+      <div class="input-group with-label" inputpadding>
+        <div class="form-input">0.5%</div>
+        <label for="">Interest Rate :</label>
+      </div>
+      <div class="input-group with-label" inputpadding>
+        <div class="form-input">
+          <ion-item class="no-margin-lbl no-border-item no-bg-item">
+            07/11/2017
+          </ion-item>
+        </div>
+        <label for="">Start Date :</label>
+      </div>
+      <div class="input-group with-label" inputpadding>
+        <div class="form-input">
+          <ion-item class="no-margin-lbl no-border-item no-bg-item">
+            02/02/2018
+          </ion-item>
+        </div>
+        <label for="">Due Date :</label>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Members
+    </ion-card-header>
+    <ion-card-content>
+      <table class="table table-strips">
+        <tr *ngFor="let person of memberList">
+          <td style="text-align:center">
+            <ion-icon name="close-circle" color="danger" item-start></ion-icon>
+          </td>
+          <td>
+            {{person.name}} - {{person.contact}}
+          </td>
+        </tr>
+      </table>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

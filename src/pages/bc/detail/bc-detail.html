@@ -1,12 +1,7 @@
-<ion-header color="sprimaruy">
-        <ion-navbar color="sprimaruy">
-        <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>BC Name</ion-title>
-    </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-
+<ion-content>
+  <ion-tabs>
+    <ion-tab [root]="tab1" tabTitle="Detail"></ion-tab>
+    <ion-tab [root]="tab2" tabTitle="Month"></ion-tab>
+    <ion-tab [root]="tab3" tabTitle="BID"></ion-tab>
+  </ion-tabs>
 </ion-content>

@@ -1,0 +1,102 @@
+<ion-header color="sprimaruy">
+  <ion-navbar color="sprimaruy">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Add BC</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <form #addbc="ngForm" (ngSubmit)="saveBC(addbc.value)">
+    <ion-card>
+      <ion-card-content>
+        <div class="input-group with-label" inputpadding>
+          <input type="text" class="form-input" [(ngModel)]="admin" name="admin">
+          <label for="">Admin :</label>
+        </div>
+        <div class="input-group with-label" inputpadding>
+          <input type="text" class="form-input" [(ngModel)]="contact" name="contact">
+          <label for="">Contact :</label>
+        </div>
+        <div class="input-group with-label" inputpadding>
+          <div class="form-input">
+            <ion-item class="no-border-item no-bg-item half">
+              <ion-select [(ngModel)]="month" name="month" [selectOptions]="selectOptions">
+                <ion-option *ngFor="let month of months" [value]="month.id">{{month.text}}</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item class="no-border-item no-bg-item half">
+              <ion-select [(ngModel)]="year" name="year" [selectOptions]="selectOptions2">
+                <ion-option *ngFor="let year of years" [value]="year.id">{{year.text}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </div>
+          <label for="">Start Month :</label>
+        </div>
+        <div class="input-group with-label" inputpadding>
+          <input type="text" class="form-input" [(ngModel)]="memberno" name="memberno">
+          <label for="">Member No :</label>
+        </div>
+        <div class="input-group with-label" inputpadding>
+          <input type="text" class="form-input" [(ngModel)]="adminyear" name="adminyear">
+          <label for="">Admin Month :</label>
+        </div>
+        <div class="input-group with-label" inputpadding>
+          <input type="text" class="form-input" [(ngModel)]="rate" name="rate">
+          <label for="">Interest Rate :</label>
+        </div>
+        <div class="input-group with-label" inputpadding>
+          <div class="form-input">
+            <ion-item class="no-border-item no-bg-item">
+              <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" name="startdate" [(ngModel)]="startDate"></ion-datetime>
+            </ion-item>
+          </div>
+          <label for="">Start Date :</label>
+        </div>
+        <div class="input-group with-label" inputpadding>
+          <div class="form-input">
+            <ion-item class="no-border-item no-bg-item">
+              <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" name="duedate" [(ngModel)]="DueDate"></ion-datetime>
+            </ion-item>
+          </div>
+          <label for="">Due Date :</label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        Add Members
+      </ion-card-header>
+      <ion-card-content>
+        <form #member="ngForm">
+          <div class="input-group">
+            <div class="flexed-form-input form-input">
+              <input type="text" class="" placeholder="Name" [(ngModel)]="member.name" name="name">
+              <input type="text" class="" placeholder="Contact No." [(ngModel)]="member.contact" name="contact">
+              <span class="input-with-icon" (click)="addMember(member.value);member.reset()">
+                <ion-icon name="add"></ion-icon>
+              </span>
+            </div>
+          </div>
+        </form>
+        <table class="table table-strips">
+          <tr *ngFor="let person of memberList; let i = index">
+            <td style="text-align:center">
+              <ion-icon name="close-circle" color="danger" item-start (click)="deleteMember(i)"></ion-icon>
+            </td>
+            <td>
+              {{person.name}} - {{person.contact}}
+            </td>
+          </tr>
+        </table>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <button type="submit" ion-button small color="secondary">Save</button>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>
